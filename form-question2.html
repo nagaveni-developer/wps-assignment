@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr"> 
+  
+<head> 
+    <meta charset="utf-8"> 
+    <title> 
+      Form
+    </title>
+  <style>
+   .b{
+     top: 10%;
+     position : relative;
+     padding: 15px 0;
+    
+   }
+    
+ 
+</style> 
+</head> 
+  
+<bo style="text-align: center;"> 
+   
+    <h1 style="color: green;"> 
+        Form 
+    </h1> 
+  
+    <h3 id="po">Calculate Total</h3> 
+    <form class="" action="index.html" method="post"> 
+         <div class="bo">
+        <div class="b">
+        <input type="text" placeholder="Enter Name" name="array[]" value="" /><br> 
+        </div>
+        <div class="b">
+        <input type="text" placeholder="Enter Item" name="array[]" value="" /><br> 
+        </div>
+	<div class="b">
+        <input type="text" placeholder="Enter Price" name="array[]" value="" /><br> 
+	</div>
+	<div class="b">
+        <input type="text" placeholder="Enter Quantity"name="array[]" value="" /><br> 
+ 	</div>
+        <button type="button" name="button" onclick="Total()"> 
+            Submit 
+        </button> 
+        
+    </form> 
+  </div>
+    <br> 
+  
+    <p id="par"></p> 
+  
+    <script type="text/javascript"> 
+        var text,i;
+        function Total() { 
+            var input = document.getElementsByName('array[]'); 
+                
+                text = "<ul>";
+	
+                         var a=input[0];
+ 			 text += "<li>" +"<b>"+"Name : "+"</b>"+ a.value + "</li>";
+			 var b=input[1];
+			 text += "<li>" +"<b>"+"Item : "+ "</b>"+b.value + "</li>";
+			 var c=input[2];
+                         text += "<li>" +"<b>"+"Price : "+"</b>"+ c.value + "</li>";
+		         var d=input[3];
+			 text += "<li>" +"<b>"+"quantity : "+ "</b>"+d.value + "</li>";
+                         var e;
+ 			 text += "<li>" +"<b>"+"Total Amount: "+"</b>"+ c.value*d.value + "</li>";
+		text += "</ul>";
+
+		document.getElementById("par").innerHTML = text;
+		document.getElementById("po").innerHTML = "Output";
+               
+        } 
+
+    </script> 
+</body> 
+  
+</html> 
